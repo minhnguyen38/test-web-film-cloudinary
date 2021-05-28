@@ -32,6 +32,11 @@
 .filmDescription {
     color: #fff;
     font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.movieBlock:hover .filmDescription {
+    color: forestgreen;
 }
 
 .othersMovies {
@@ -56,6 +61,12 @@
 
 .othersMoviesTitle {
     margin-left: 20px;
+    transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.othersMoviesDetail:hover .othersMoviesTitle {
+    color: forestgreen;
 }
 
 .movieTitle {
