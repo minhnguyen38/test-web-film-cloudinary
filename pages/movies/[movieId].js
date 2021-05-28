@@ -4,7 +4,7 @@ import pageStyles from '../../styles/Page.module.css'
 import { Row, Col } from 'antd'
 import React from 'react'
 import { Video } from 'cloudinary-react';
-import { fakeMovies } from "../../components/Body";
+// import { fakeMovies } from "../../components/Body";
 
 const ReferenceMovieItem = ({ url, title, image }) => {
     const onClickUrl = () => {
@@ -57,7 +57,7 @@ const MoviePage = (props) => {
                     <h3 className={pageStyles.othersMovies}>Phim Khác</h3>
                     {
                         movieId &&
-                        props?.data
+                        props.data
                             .filter(movie => movie.url.split("/").pop() !== movieId)
                             .map((movie, idx) => <ReferenceMovieItem
                                 key={`ref-movie-${idx}`}
@@ -72,12 +72,19 @@ const MoviePage = (props) => {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
+    const FAKE_MOVIES = [
+        { url: "/movies/Dune-Official", title: "Dune",  image: "/images/snake-eyes.jpg"},
+        { url: "/movies/the-midnight-sky_zelnkw", title: "The Midnight Sky", image: "/images/falcon.jpg"},
+        { url: "/movies/greenland_kovcbp", title: "Greenland", image: "/images/wandavision-poster.jpg"},
+        { url: "/movies/truenorth-ad-reel_n7spqf", title: "Truenorth Ad Reel", image: "/images/snake-eyes.jpg" },
+    ]
     return {
         props: {
-            data: fakeMovies
+            data: FAKE_MOVIES
         }
     }
 }
+
 
 export default MoviePage
