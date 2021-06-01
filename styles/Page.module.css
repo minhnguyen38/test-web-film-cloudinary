@@ -1,0 +1,76 @@
+
+.header {
+    background: #0c2738;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.header .logoContainer {
+    width: 50%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li {
+    width: 100px;
+    font-size: 20px;
+}
+
+.movieBlock:hover {
+    cursor: pointer;
+}
+
+.filmDescription {
+    color: #fff;
+    font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.movieBlock:hover .filmDescription {
+    color: forestgreen;
+}
+
+.othersMovies {
+    color: #fff;
+    font-size: 1.2rem;
+    padding-bottom: 50px;
+}
+
+.othersMoviesDetail {
+    height: 170px;
+    display: flex;
+}
+
+.othersMoviesDetail:hover {
+    cursor: pointer;
+}
+
+.othersMoviesImg {
+    width: 100px;
+    height: 150px;
+}
+
+.othersMoviesTitle {
+    transition: 0.3s ease-in-out;
+    font-size: 1.1rem;
+    display: block;
+    color: #fff;
+}
+
+.othersMoviesTitle:hover  {
+    color: forestgreen;
+}
+
+.movieTitle {
+    color: #fff;
+    font-size: 1.2rem;
+}

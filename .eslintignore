@@ -1,0 +1,7 @@
+// .eslintignore
+build/*
+public/*
+src/react-app-env.d.ts
+src/serviceWorker.ts
+/* eslint-disable no-console, no-param-reassign */ For one or multiple lines
+/* eslint-disable-next-line no-console*/ For next line
